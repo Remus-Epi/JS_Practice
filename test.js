@@ -1,4 +1,7 @@
-let a = false;
+const arr = ['Remus', 'Simona', 'Rufus'];
 
-if (a) console.log('adevarat');
-else console.log('fals');
+
+
+arr.forEach(element => {
+    console.log(element);    
+});
