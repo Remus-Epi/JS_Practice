@@ -27,3 +27,39 @@ const str1 = 'rremuasdasr';
 const str2 = 'saudmesrra';
 
 console.log(AnagramCheck(str1, str2));
+
+
+//Caesar Cipher
+((shift, text) => {
+    let result = '';
+    for(i = 0; i < text.length; i++) {
+        const code = text.charCodeAt(i);
+        const shifed = code + shift;
+        result += String.fromCharCode(shifed);  
+    }
+    console.log(result);
+})(3, 'abcdef');
+
+
+//Functional Calculator
+((number) => {
+    let period = 1;
+    for(i = 1; i <= number; i++)
+        period *= i;
+    console.log(period);
+})(5);
+
+
+//Flatten Nested Array
+
+(function nesting(input)  {
+    nest = [];
+    do {
+        for(i = 0; i < input.length; i++) {
+            if(input[i].length === 1) { 
+                nest.push(input[i])
+                input.shift();
+            }
+        }
+    } while(input.length > 0);
+})([1, [2, [3, 4]], 5]);
